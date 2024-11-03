@@ -1,0 +1,22 @@
+<h1>Добро пожаловать на главную страницу магазина!</h1>
+
+<h2>Список клиентов:</h2>
+<ul>
+    {% for client in clients %}
+        <li>{{ client.name }} - {{ client.email }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Список товаров:</h2>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Список заказов:</h2>
+<ul>
+    {% for order in orders %}
+        <li>Заказ №{{ order.id }} от {{ order.client.name }} на сумму {{ order.total_amount }}</li>
+    {% endfor %}
+</ul>

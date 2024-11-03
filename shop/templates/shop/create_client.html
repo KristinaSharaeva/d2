@@ -1,0 +1,8 @@
+<form method="post">
+    {% csrf_token %}
+    Имя: <input type="text" name="name"><br>
+    Электронная почта: <input type="email" name="email"><br>
+    Телефон: <input type="text" name="phone"><br>
+    Адрес: <textarea name="address"></textarea><br>
+    <button type="submit">Создать клиента</button>
+</form>
